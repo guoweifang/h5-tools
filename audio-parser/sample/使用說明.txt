@@ -1,0 +1,31 @@
+## 支援格式
+目前只支援.mp3
+
+## 音效檔案放法
+音效讀取器名稱
+    種類A
+        音效A
+        音效B
+        ...
+    種類B
+        音效C
+        音效D
+        ...
+    ...
+
+可以參考test資料夾
+
+## audio-settings生成
+將test資料夾拖曳到build-audio-settings.bat上
+即會產生 test.ts
+將test.ts放進專案內
+
+## 與AudioManager結合
+專案初始化的時候將
+// 實作並告知audioManager音效讀取方式
+this.audioManager.addLoader('test', this);
+// 加入IAudioSetting   即剛剛產生的test.ts
+this.audioManager.addSettings(audioSettings);
+
+## 播放音效
+this.audioManager.play(AudioKeys.bgm1, 10);

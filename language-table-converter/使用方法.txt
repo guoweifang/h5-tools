@@ -1,0 +1,16 @@
+編輯languagePathSetting.json檔，之後以command line或拖曳等方式輸入給LanguageExcelToJson執行檔
+
+
+json欄位說明:
+
+enumBaseLanguage: 
+	用來作為轉換為包含所有字串key值之enum typescript文件的語言
+
+languageTablePath: 
+	放置語言對應表Excel的路徑，副檔名.xlsx的檔案皆會被讀取，表單可以是一份或多份Excel檔但均須遵照格式
+
+enumPath:
+	轉換出來的enum文件存放的路徑，檔名固定為text-key-define.ts
+
+tableJsonPath
+	轉換出來的語言表json檔存放的路徑
